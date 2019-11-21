@@ -18,5 +18,5 @@ jobs:
     - name: Build NuGet Package
       run: dotnet pack ./src/TestHelpers/TestHelpers.fsproj --configuration Release -o .Nuget
     - name: Deploy NuGet Package
-      run: dotnet nuget push ./src/TestHelpers/.Nuget/TestHelpers.1.0.0.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./src/TestHelpers/.Nuget/TestHelpers.1.0.0.nupkg -s https://api.nuget.org/v3/index.json -k $NUGET_API_KEY
 
