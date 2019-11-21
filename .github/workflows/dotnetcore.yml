@@ -1,6 +1,6 @@
 name: .NET Core
 
-on: [push]
+on: [pull_request]
 
 jobs:
   build:
@@ -13,9 +13,10 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.0.100
-    - name: Build with dotnet
+    - name: Build 
       run: dotnet build --configuration Release
-    - name: Pack with dotnet
-      run: dotnet pack
-#    - name: Push to Nuget.org
-#      run: dotnet push 
+    - name: Build NuGet Package
+      run: dotnet pack ./src/TestHelpers/TestPropers.fsproj --configuration Release -o .Nuget
+    - name: Deploy NuGet Package
+      run: dotnet nuget push ./src/TestHelpers/.Nuget/TestHelpers.2.2.1.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
+
