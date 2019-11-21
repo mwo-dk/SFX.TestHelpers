@@ -19,5 +19,5 @@ jobs:
       run: 
         dotnet pack ./src/TestHelpers/TestHelpers.fsproj --configuration Release -o ./nuget
     - name: Deploy NuGet Package
-      run: dotnet nuget push /home/runner/work/SFX.TestHelpers/SFX.TestHelpers/nuget/TestHelpers.1.0.0.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push /home/runner/work/SFX.TestHelpers/SFX.TestHelpers/nuget/SFX.TestHelpers.1.0.0.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
 
