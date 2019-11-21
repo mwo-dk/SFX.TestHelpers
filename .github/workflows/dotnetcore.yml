@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@master
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
@@ -16,7 +16,7 @@ jobs:
     - name: Build 
       run: dotnet build --configuration Release
     - name: Build NuGet Package
-      run: dotnet pack ./src/TestHelpers/TestPropers.fsproj --configuration Release -o .Nuget
+      run: dotnet pack ./src/TestHelpers/TestHelpers.fsproj --configuration Release -o .Nuget
     - name: Deploy NuGet Package
-      run: dotnet nuget push ./src/TestHelpers/.Nuget/TestHelpers.2.2.1.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./src/TestHelpers/.Nuget/TestHelpers.1.0.0.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
 
