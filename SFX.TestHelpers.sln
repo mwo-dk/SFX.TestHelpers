@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{37F85EE6-0CBF-4E04-9DAB-D253539BAC12}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TestHelpers", "src\TestHelpers\TestHelpers.fsproj", "{01AC526E-682F-4D59-B892-9DE0EE83934A}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "TestHelpers", "src\TestHelpers\TestHelpers.fsproj", "{01AC526E-682F-4D59-B892-9DE0EE83934A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{38949BDA-6E45-427E-A0A9-A0B6CEA69F2D}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnetcore.yml = .github\workflows\dotnetcore.yml
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{01AC526E-682F-4D59-B892-9DE0EE83934A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -33,7 +36,13 @@ Global
 		{01AC526E-682F-4D59-B892-9DE0EE83934A}.Release|x86.ActiveCfg = Release|Any CPU
 		{01AC526E-682F-4D59-B892-9DE0EE83934A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{01AC526E-682F-4D59-B892-9DE0EE83934A} = {37F85EE6-0CBF-4E04-9DAB-D253539BAC12}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5532EC2-BC7B-41DA-BE7B-A4F99A980573}
 	EndGlobalSection
 EndGlobal
