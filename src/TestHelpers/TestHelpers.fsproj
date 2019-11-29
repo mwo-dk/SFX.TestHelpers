@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <RootNamespace>SFX.TestHelpers</RootNamespace>
     <PackageId>SFX.TestHelpers</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <IsPackable>true</IsPackable>
 
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -15,11 +15,16 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/mwo-dk/SFX.TestHelpers</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mwo-dk/SFX.TestHelpers</RepositoryUrl>
+    <PackageIcon>dingir.png</PackageIcon>
     <PackageTags>xUnit F#</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="dingir.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
   <ItemGroup>
